@@ -3,18 +3,16 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Banner from './components/Banner';
 import Footer from './components/Footer';
-import Card from './components/card';
+import Freebook from './components/Freebook';
 function App() {
   
 
   return (
     <>
-     
        <Navbar/>
        <Banner/>
+       <Freebook/>
        <Footer/>
-       <Card />
-       
     </>
   )
 }

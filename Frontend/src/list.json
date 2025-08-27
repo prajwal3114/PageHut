@@ -1,0 +1,68 @@
+[
+    {
+      "id": 1,
+      "name": "story book",
+      "title": "The Adventures of Tom Sawyer",
+      "price": 0,
+      "category": "Free",
+      "image": "/assets/Banner.png"
+    },
+    {
+      "id": 2,
+      "name": "story book",
+      "title": "The Adventures of Tom Sawyer",
+      "price": 0,
+      "category": "Free",
+      "image": "/assets/Banner.png"
+    },
+    {
+      "id": 3,
+      "name": "story book",
+      "title": "The Adventures of Tom Sawyer",
+      "price": 0,
+      "category": "Free",
+      "image": "/assets/Banner.png"
+    },
+    {
+      "id": 4,
+      "name": "story book",
+      "title": "The Adventures of Tom Sawyer",
+      "price": 0,
+      "category": "Free",
+      "image": "/assets/Banner.png"
+    },
+    {
+      "id": 5,
+      "name": "comedy book",
+      "title": "The Adventures of Tom Sawyer",
+      "price": 20,
+      "category": "Free",
+      "image": "/assets/Banner.png"
+    },
+    {
+      "id": 6,
+      "name": "Sports book",
+      "title": "The Adventures of Tom Sawyer",
+      "price": 50,
+      "category": "sports",
+      "image": "/assets/Banner.png"
+    },
+    {
+      "id": 7,
+      "name": "music book",
+      "title": "The Adventures of Tom Sawyer",
+      "price": 30,
+      "category": "music",
+      "image": "/assets/Banner.png"
+    },
+    {
+      "id": 8,
+      "name": "Food book",
+      "title": "The Adventures of Tom Sawyer",
+      "price": 20,
+      "category": "Free",
+      "image": "/assets/Banner.png"
+    }
+  ]
+ 
+  
