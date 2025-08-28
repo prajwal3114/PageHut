@@ -1,18 +1,16 @@
-import { useState } from 'react';
-import './App.css';
-import Navbar from './components/Navbar';
-import Banner from './components/Banner';
-import Footer from './components/Footer';
-import Freebook from './components/Freebook';
+import './App.css'
+import Home from './home/home'   
+import Course from './components/course'
+import { Routes,Route } from 'react-router-dom'
 function App() {
-  
-
   return (
     <>
-       <Navbar/>
-       <Banner/>
-       <Freebook/>
-       <Footer/>
+      {/*<Home />  
+      <Course /> */}
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/course' element={<Course />} />
+      </Routes>
     </>
   )
 }
