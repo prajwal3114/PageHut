@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useForm } from "react-hook-form"
+import axios from 'axios'
 
 function Login() {
   const {
@@ -9,7 +10,29 @@ function Login() {
     formState: { errors },
   } = useForm()
 
-  const onSubmit = (data) => console.log(data)
+  const onSubmit = async (data) => {
+    const userInfo = {
+      email: data.email,
+      password: data.password,
+    }
+    try {
+      const res = await axios.post("http://localhost:4001/user/login", userInfo)
+      console.log(res.data)
+      if (res.data) {
+        alert("Login Successful")
+        document.getElementById("my_modal_3").close()
+        localStorage.setItem("Users", JSON.stringify(res.data.user))
+        window.location.reload()
+      }
+    } catch (err) {
+      if (err.response) {
+        console.log(err)
+        alert("Error: " + err.response.data.message)
+      } else {
+        alert("Error: " + err.message)
+      }
+    }
+  }
 
   return (
     <div>

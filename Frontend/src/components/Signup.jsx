@@ -22,8 +22,9 @@ function Signup() {
         console.log(res.data);
         if (res.data) {
           alert("Signup Successfully");
+          localStorage.setItem("Users", JSON.stringify(res.data.user));
+          window.location.replace("/");
         }
-        localStorage.setItem("Users",JSON.stringify(res.data.user));
       })
       .catch((err) => {
         if (err.response) {

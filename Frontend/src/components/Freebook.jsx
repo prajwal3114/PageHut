@@ -14,15 +14,14 @@ function Freebook() {
       try {
         const res = await axios.get("http://localhost:4001/book")
         console.log(res.data)
-        const data=res.data.filter((data)=> data.caegory==="Free");
-        setBook(res.data)
+        const freeData = res.data.filter((data) => data.category === "Free");
+        setBook(freeData)
       } catch (error) {
         console.log(error)
       }
     }
     getBook()
   }, [])
-  const filterData = list.filter((data) => data.category === "Free")
 
   var settings = {
     dots: true,
@@ -73,8 +72,8 @@ function Freebook() {
       </div>
       <div>
         <Slider {...settings}>
-          {filterData.map((item) => (
-            <Cards item={item} key={item.id} />   
+          {book.map((item) => (
+            <Cards item={item} key={item._id || item.id} />   
           ))}
         </Slider>
       </div>

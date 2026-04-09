@@ -70,7 +70,17 @@ function Navbar() {
 </label>
 
   </div>
-    <a className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300" onClick={()=>document.getElementById("my_modal_3").showModal()}>Login</a>
+    {
+      localStorage.getItem("Users") ? (
+        <a className="bg-red-500 text-white px-3 py-2 rounded-md hover:bg-red-700 duration-300 cursor-pointer" onClick={() => {
+          localStorage.removeItem("Users")
+          window.location.reload()
+        }}>Logout</a>
+      ) : (
+        <a className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer" onClick={()=>document.getElementById("my_modal_3").showModal()}>Login</a>
+      )
+    }
+    
     <Login/>
   </div>
 </div>
